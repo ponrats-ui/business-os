@@ -9,16 +9,17 @@ void main() {
 
     await tester.pumpWidget(const BusinessOsApp());
 
-    expect(find.text('Choose Business Category'), findsOneWidget);
-    expect(find.text('Coffee Shop'), findsOneWidget);
-    expect(find.text('Coffee Starter'), findsOneWidget);
+    expect(find.text('เลือกประเภทร้าน'), findsOneWidget);
+    expect(find.text('ร้านกาแฟ'), findsOneWidget);
+    expect(find.text('ร้านกาแฟ (เริ่มต้น)'), findsOneWidget);
+    expect(find.text('เปิดร้านได้ภายใน 5 นาที'), findsOneWidget);
 
-    await tester.tap(find.text('Create Store Preview'));
+    await tester.tap(find.text('สร้างตัวอย่างร้าน'));
     await tester.pumpAndSettle();
 
-    expect(find.text('Ready to sell'), findsOneWidget);
-    expect(find.text('Espresso'), findsOneWidget);
-    expect(find.text('THB 45'), findsOneWidget);
+    expect(find.text('พร้อมขาย'), findsOneWidget);
+    expect(find.text('เอสเปรสโซ'), findsWidgets);
+    expect(find.text('฿45'), findsWidgets);
   });
 
   testWidgets('category selection refreshes available templates', (
@@ -29,15 +30,15 @@ void main() {
 
     await tester.pumpWidget(const BusinessOsApp());
 
-    await tester.tap(find.widgetWithText(ChoiceChip, 'Fruit Shop'));
+    await tester.tap(find.text('ร้านผลไม้'));
     await tester.pumpAndSettle();
 
-    expect(find.text('Fresh Fruit Stand'), findsOneWidget);
-    expect(find.text('Watermelon'), findsNothing);
+    expect(find.text('ร้านผลไม้ (เริ่มต้น)'), findsOneWidget);
+    expect(find.text('แตงโม'), findsOneWidget);
 
-    await tester.tap(find.text('Create Store Preview'));
+    await tester.tap(find.text('สร้างตัวอย่างร้าน'));
     await tester.pumpAndSettle();
 
-    expect(find.text('Watermelon'), findsOneWidget);
+    expect(find.text('แตงโม'), findsWidgets);
   });
 }
