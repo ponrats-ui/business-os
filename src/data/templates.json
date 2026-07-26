@@ -1,0 +1,111 @@
+{
+  "templates": [
+    {
+      "id": "food-cook",
+      "name": "ร้านอาหารตามสั่ง",
+      "category": "food",
+      "description": "Preset สำหรับร้านอาหารตามสั่งที่ต้องการเมนูหลากหลายและวัตถุดิบหลัก",
+      "menuItems": [
+        { "id": "pad-thai", "name": "ผัดไทย", "price": 79, "category": "อาหารหลัก", "cost": 35, "isPopular": true },
+        { "id": "fried-rice", "name": "ข้าวผัด", "price": 69, "category": "อาหารหลัก", "cost": 30 },
+        { "id": "tom-yum", "name": "ต้มยำกุ้ง", "price": 99, "category": "แกง", "cost": 45 }
+      ],
+      "stockItems": [
+        { "id": "rice", "name": "ข้าวสาร", "unit": "กิโลกรัม", "quantity": 50, "minStock": 10, "costPerUnit": 35, "category": "วัตถุดิบ" },
+        { "id": "egg", "name": "ไข่", "unit": "แผง", "quantity": 20, "minStock": 5, "costPerUnit": 35, "category": "วัตถุดิบ" },
+        { "id": "shrimp", "name": "กุ้ง", "unit": "กิโลกรัม", "quantity": 10, "minStock": 3, "costPerUnit": 240, "category": "วัตถุดิบ" }
+      ],
+      "employees": [
+        { "id": "emp-001", "name": "สมชาย", "role": "พ่อครัว", "hourlyRate": 120, "active": true },
+        { "id": "emp-002", "name": "ปรียา", "role": "แคชเชียร์", "hourlyRate": 95, "active": true }
+      ],
+      "taxSummary": {
+        "period": "2026-07",
+        "subtotal": 180000,
+        "taxAmount": 12600,
+        "total": 192600,
+        "taxRate": 0.07
+      }
+    },
+    {
+      "id": "fried-chicken",
+      "name": "ร้านไก่ทอด",
+      "category": "food",
+      "description": "Preset สำหรับร้านไก่ทอดที่เน้นเมนูขายดีและวัตถุดิบคงคลัง",
+      "menuItems": [
+        { "id": "fried-chicken-bucket", "name": "ไก่ทอดห้าชิ้น", "price": 129, "category": "เมนูหลัก", "cost": 55, "isPopular": true },
+        { "id": "spicy-chicken", "name": "ไก่ทอดแซ่บ", "price": 99, "category": "เมนูหลัก", "cost": 45 },
+        { "id": "fries", "name": "เฟรนช์ฟราย", "price": 49, "category": "ข้างเคียง", "cost": 18 }
+      ],
+      "stockItems": [
+        { "id": "chicken", "name": "ไก่สด", "unit": "กิโลกรัม", "quantity": 30, "minStock": 8, "costPerUnit": 95, "category": "เนื้อสัตว์" },
+        { "id": "oil", "name": "น้ำมันทอด", "unit": "ลิตร", "quantity": 15, "minStock": 3, "costPerUnit": 70, "category": "วัตถุดิบ" },
+        { "id": "sauce", "name": "ซอสรสเผ็ด", "unit": "ขวด", "quantity": 12, "minStock": 4, "costPerUnit": 25, "category": "เครื่องปรุง" }
+      ]
+    },
+    {
+      "id": "tea-coffee",
+      "name": "ร้านชา/กาแฟ",
+      "category": "drink",
+      "description": "Preset สำหรับร้านเครื่องดื่มที่ต้องการเมนูเบสิกและวัตถุดิบคงคลัง",
+      "menuItems": [
+        { "id": "milk-tea", "name": "ชานม", "price": 55, "category": "ชา", "cost": 18, "isPopular": true },
+        { "id": "americano", "name": "เอเมอริกาโน", "price": 65, "category": "กาแฟ", "cost": 20 },
+        { "id": "iced-latte", "name": "ไอศครีมลาเต้", "price": 75, "category": "กาแฟ", "cost": 24 }
+      ],
+      "stockItems": [
+        { "id": "coffee-bean", "name": "เมล็ดกาแฟ", "unit": "กิโลกรัม", "quantity": 8, "minStock": 2, "costPerUnit": 320, "category": "วัตถุดิบ" },
+        { "id": "milk", "name": "นมสด", "unit": "ลิตร", "quantity": 20, "minStock": 5, "costPerUnit": 42, "category": "วัตถุดิบ" },
+        { "id": "sugar", "name": "น้ำตาล", "unit": "กิโลกรัม", "quantity": 10, "minStock": 3, "costPerUnit": 28, "category": "วัตถุดิบ" }
+      ]
+    },
+    {
+      "id": "meatball",
+      "name": "ร้านลูกชิ้น",
+      "category": "snack",
+      "description": "Preset สำหรับร้านลูกชิ้นที่มีเมนูเสิร์ฟพร้อมน้ำจิ้มและของทานเล่น",
+      "menuItems": [
+        { "id": "meatball-stick", "name": "ลูกชิ้นเส้น", "price": 59, "category": "เมนูหลัก", "cost": 22, "isPopular": true },
+        { "id": "tofu-soup", "name": "เต้าหู้ยัดไส้", "price": 49, "category": "เมนูเสริม", "cost": 17 },
+        { "id": "sausage", "name": "ไส้กรอกกรอบ", "price": 69, "category": "เมนูเสริม", "cost": 21 }
+      ],
+      "stockItems": [
+        { "id": "meatball", "name": "ลูกชิ้น", "unit": "กิโลกรัม", "quantity": 15, "minStock": 4, "costPerUnit": 120, "category": "วัตถุดิบ" },
+        { "id": "broth", "name": "น้ำซุป", "unit": "ลิตร", "quantity": 12, "minStock": 3, "costPerUnit": 35, "category": "วัตถุดิบ" },
+        { "id": "soy-sauce", "name": "น้ำปลาร้า", "unit": "ขวด", "quantity": 8, "minStock": 2, "costPerUnit": 45, "category": "เครื่องปรุง" }
+      ]
+    },
+    {
+      "id": "fruit-shop",
+      "name": "ร้านผลไม้",
+      "category": "fruit",
+      "description": "Preset สำหรับร้านผลไม้สดที่ต้องการจัดการสต็อกและเมนูคัดเลือก",
+      "menuItems": [
+        { "id": "fruit-salad", "name": "สลัดผลไม้", "price": 89, "category": "เมนูพร้อมรับประทาน", "cost": 30, "isPopular": true },
+        { "id": "smoothie", "name": "สมูทตี้", "price": 99, "category": "เครื่องดื่ม", "cost": 28 },
+        { "id": "fruit-plate", "name": "แผ่นผลไม้", "price": 129, "category": "เมนูพร้อมรับประทาน", "cost": 42 }
+      ],
+      "stockItems": [
+        { "id": "watermelon", "name": "แตงโม", "unit": "ผล", "quantity": 12, "minStock": 3, "costPerUnit": 60, "category": "ผลไม้" },
+        { "id": "banana", "name": "กล้วย", "unit": "กลุ่ม", "quantity": 20, "minStock": 5, "costPerUnit": 35, "category": "ผลไม้" },
+        { "id": "pineapple", "name": "สับปะรด", "unit": "ผล", "quantity": 8, "minStock": 2, "costPerUnit": 55, "category": "ผลไม้" }
+      ]
+    },
+    {
+      "id": "fashion-store",
+      "name": "ร้านเสื้อผ้า",
+      "category": "fashion",
+      "description": "Preset สำหรับร้านขายเสื้อผ้าที่มีหมวดหมู่สินค้าและสต็อกแบบพื้นฐาน",
+      "menuItems": [
+        { "id": "tshirt", "name": "เสื้อยืด", "price": 299, "category": "เสื้อผ้า", "cost": 140, "isPopular": true },
+        { "id": "pants", "name": "กางเกงขายาว", "price": 399, "category": "เสื้อผ้า", "cost": 180 },
+        { "id": "dress", "name": "ชุดเดรส", "price": 599, "category": "เสื้อผ้า", "cost": 260 }
+      ],
+      "stockItems": [
+        { "id": "fabric", "name": "ผ้า", "unit": "เมตร", "quantity": 120, "minStock": 20, "costPerUnit": 48, "category": "วัสดุ" },
+        { "id": "tag", "name": "ป้ายราคา", "unit": "กล่อง", "quantity": 50, "minStock": 10, "costPerUnit": 15, "category": "อุปกรณ์" },
+        { "id": "hanger", "name": "ไม้แขวนเสื้อ", "unit": "ชิ้น", "quantity": 40, "minStock": 10, "costPerUnit": 22, "category": "อุปกรณ์" }
+      ]
+    }
+  ]
+}
